@@ -1,0 +1,85 @@
+#mainDiv{
+    width: 90%;
+    height: 440px;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    grid-template-rows: repeat(5, 20%);
+    border: solid 1px black;
+}
+
+body{
+    height: 100%;
+}
+
+img{
+    width: 375px;
+    height: 375px;
+    border-radius: 100%;
+    object-fit: cover;
+    align-content: center;
+    margin: auto;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+#teddyDescription{
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    text-align: center;
+    margin: auto;
+}
+
+#teddyName{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+    margin: auto;
+}
+
+#teddyPrice{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+    margin: auto;
+}
+
+#colorChoice{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+    margin: auto;
+}
+
+form{
+    margin: auto;
+}
+
+#quantityChoice{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    text-align: center;
+}
+
+#buyButton{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+

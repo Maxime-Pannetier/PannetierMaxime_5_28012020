@@ -1,0 +1,20 @@
+
+    // let htmlGenerate =`<a id="${_id}" href="singleproduct.html?product_id=${_id}">
+    //         <figure class="articles">
+    //             <img src="${picture}" alt="Norbert">
+    //             <figcaption>
+    //                 <p class="teddyNames">Norbert</p>
+    //                 <p class="teddyPrices">29 €</p>
+    //             </figcaption>
+    //         </figure>
+    //     </a>`;
+
+    // mainDiv.insertAdjacentHTML("beforeend",htmlGenerate);
+
+    1 blink
+    2 webkit
+    3 firefox
+
+
+
+    

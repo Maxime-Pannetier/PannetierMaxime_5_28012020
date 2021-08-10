@@ -1,0 +1,106 @@
+#main
+{
+    height: 375px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 90% 10%;
+}
+
+#main a
+{
+    height: 200px;
+}
+
+#Cart
+{
+    width: 90%;
+    height: 90%;
+    background-color: #fff ;
+    margin: 0 auto;
+    border: solid 1px grey;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.articleList
+{
+    display: flex;
+}
+
+
+
+fieldset
+{
+    width: 250px;
+    margin: auto;
+}
+
+#infoArticleList
+{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    border: solid 1px grey;
+}
+
+
+
+.articleList
+{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    border: solid 1px grey;
+
+}
+
+#totalPrice
+{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #fff;
+}
+
+#totalPrice p
+{
+    text-align: center;
+    border: solid 1px black;
+}
+
+#totalPriceAmount
+{
+    border: solid 1px black;
+    text-align: center;
+}
+
+#form
+{
+    margin-top: 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+#confirmOrder, #clearCart
+{
+    width: 150px;
+    height: 50px;
+}
+
+#buttonCart
+{
+    width: 500px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.confirmText
+{
+    grid-column: 1/3;
+    text-align: center;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="singleproduct.css" />
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" media="screen and (max-width: 766px)" href="phone_resolution_cart.css" />
+    <!-- responsive-->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" /> <!-- favicon-->
+    <title>Orinoco</title>
+
+    <script src="https://kit.fontawesome.com/5e30c8a0f2.js" crossorigin="anonymous"></script> <!-- icon font awesome -->
+    <!-- ajouter font -->
+
+</head>
+
+
+<body>
+    <header>
+        <i id="menu" class="fas fa-grip-lines fa-3x"></i>
+        <a id="index" href="index.html"><img src="JWDP5/images/Orinoco.png" alt="orinoco"></a>
+        <a id="cart" href="cart.html"><i class="fas fa-shopping-cart fa-3x"></i></a>
+    </header>
+    
+    <main id="main">
+    <div id="Cart">
+        <div id="infoArticleList">
+            <p>Produit(s)</p>
+            <p>Couleur(s)</p> 
+            <p>Prix Unitaire</p>
+            <p>Quantité</p>
+            <p>Prix total du produit</p>
+        </div>
+        <div id="cartList"></div>
+    </div>
+    <div id="totalPrice">
+        <p>prix total : </p>
+        <div id="totalPriceAmount"></div>
+    </div>
+    
+    <form id="form">
+        <fieldset>
+            <legend>A propos de vous</legend>
+                <div><label for="lastName">Votre nom</label> : <input type="text" name="lastName" id="lastName" required/></div>
+                <div><label for="firstName">Votre prénom</label> : <input type="text" name="firstName" id="firstName" required/></div>
+                <div><label for="email">Votre email</label> : <input type="email" name="email" id="email" required/></div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Votre adresse</legend>
+                <div><label for="address">Votre adresse</label> : <input type="text" name="address" id="address" required/></div>
+                <div><label for="city">Votre ville</label> : <input type="text" name="city" id="city" required/></div>
+        </fieldset>
+    </form>
+</main>
+    <div id="buttonCart">
+    <input id="confirmOrder" type="submit" form="form" value="Confirmer Commande"/>
+    <input id="clearCart" type="button" value="Vider le panier" />
+    </div>
+
+    
+
+    <footer>
+        <ul>
+            <li><i class="fas fa-hands-helping"></i>    Devenir partenaire</li>
+            <li>Mentions legales</li>
+            <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
+        </ul>
+    </footer>
+
+    <script src="function.js"></script>
+    <script src="cart.js" async></script>
+</body>
+
+</html>
