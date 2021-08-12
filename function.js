@@ -102,7 +102,7 @@ function singleProductPage(picture, name, price, description, colors, _id) {
     colorRadios[0].setAttribute("checked","");
 
     // QUANTITY BUTTON
-    let quantityButtonForm = document.createElement("form");
+    let quantityButtonForm = document.createElement("div");
 
     newDiv.appendChild(quantityButtonForm);
 
@@ -234,8 +234,8 @@ function getBuyerInfo(){
 }
 
 // MESSAGE CONFIRM ORDER
-function confirmOrderMessage(prenom, orderid){
-    let confirmOrderMessage =`<p class="confirmText"> merci ${prenom} pour ta commande, ton numéro est le ${orderid}" </p>`;
+function confirmOrderMessage(prenom, orderid, totalPrice){
+    let confirmOrderMessage =`<p class="confirmText"> merci ${prenom} pour ta commande, ton numéro est le ${orderid}, le prix total est de ${totalPrice}€" </p>`;
     document.getElementById("main").innerHTML=confirmOrderMessage;
     document.getElementById("buttonCart").innerHTML="";
     localStorage.clear();
@@ -254,10 +254,14 @@ if (orderForm){
         //recherche des articles dans le LS puis ajout dans la variable productsCart
         for (let nombreArticleLS = 0; nombreArticleLS < localStorage.length; nombreArticleLS++){
                 let localStorageItems = JSON.parse(localStorage.getItem(localStorage.key(nombreArticleLS)));
-                console.log(localStorageItems);
                 productsCart.push(localStorageItems._id);
             }
-
+        
+        if(productsCart.length==0){
+            alert("votre panier est vide");
+            return
+        }
+        
         //post infos acheteur + liste article pour retour de l'order ID
         const option = {
             method:"POST",
@@ -272,7 +276,7 @@ if (orderForm){
         // requete fetch pour obtention orderID
         fetch("http://localhost:3000/api/teddies/order",option)
         .then(response => response.json())
-        .then(response => {confirmOrderMessage(response.contact.lastName, response.orderId)})
+        .then(response => {confirmOrderMessage(response.contact.lastName, response.orderId, totalPrice)})
         .catch(error => alert("Erreur : " + error));
     });
 }
