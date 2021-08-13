@@ -82,4 +82,7 @@ form{
     grid-row-end: 6;
 }
 
-
+#quantityDiv
+{
+    margin: auto;
+}

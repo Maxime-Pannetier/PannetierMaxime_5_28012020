@@ -103,6 +103,8 @@ function singleProductPage(picture, name, price, description, colors, _id) {
 
     // QUANTITY BUTTON
     let quantityButtonForm = document.createElement("div");
+    quantityButtonForm.setAttribute("id", "quantityDiv")
+
 
     newDiv.appendChild(quantityButtonForm);
 
